@@ -1,0 +1,50 @@
+@baseUrl= http://localhost:5000/blogPosts
+
+GET http://localhost:5000/blogPosts?title=maledetti
+
+###
+
+GET {{baseUrl}}
+
+###
+
+GET {{baseUrl}}/66bf209a22b7a3dd39753525
+
+###
+
+POST {{baseUrl}}
+Content-Type: application/json
+ 
+{
+    "category": "categoria2",
+    "title": "001",
+    "cover": "",
+    "readTime": {
+        "value": 1,
+        "unit": "min"
+    },
+    "author": "66c62ebd23cdebec0a1b54b0",
+    "content": "0001"
+} 
+
+###
+
+PUT {{baseUrl}}/66bb6fe686d21962dcd3a394
+Content-Type: application/json
+
+{
+    "category": "epicode",
+    "title": "basta",
+    "cover": "qwert.jpg",
+    "readTime": {
+        "value": 1,
+        "unit": "min"
+    },
+    "author": "pp",
+    "content": "basta2"
+} 
+
+
+###
+
+DELETE {{baseUrl}}/66cf1cd91e0ecb57458317ca

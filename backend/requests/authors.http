@@ -1,0 +1,77 @@
+@baseUrl=http://localhost:5000/authors
+
+
+### RITORNA LA LISTA DEGLI AUTORI
+GET {{baseUrl}}
+###
+GET {{baseUrl}}?page=1&perPage=5
+### RITORNA IL SINGOLO AUTORE
+GET {{baseUrl}}/66a938123c314f505d26f795
+### CREA UN NUOVO AUTORE
+POST {{baseUrl}}
+Content-Type: application/json
+
+
+{
+  "name": "Enzo",
+  "lastName": "More",
+  "birthday": "1993-23-06T00:00:00.000Z",
+  "email": "enzo@more.com",
+  "avatar": "https://njhalloffame.org/wp-content/uploads/2021/04/generic-avatar-300x300.png"
+}
+
+### MODIFICA UN AUTORE CON ID ASSOCIATO
+PUT {{baseUrl}}/66aa721423ea2989207e7eb5
+Content-Type: application/json
+
+{
+  "avatar":
+        "https://njhalloffame.org/wp-content/uploads/2021/04/generic-avatar-300x300.png"
+}
+### CANCELLA UN AUTORE CON ID ASSOCIATO
+DELETE {{baseUrl}}/66a939713c314f505d26f793
+
+### RITORNA I POSTSBLOG DI UN AUTORE
+GET {{baseUrl}}/66ad2855f9e65c7c2bc990cd/blogPosts
+### RITORNA I POSTSBLOG DI UN AUTORE
+GET {{baseUrl}}/66ad2c47cdac3f5495b31304/blogPosts
+
+
+
+@baseUrl= http://localhost:5000/authors
+
+GET {{baseUrl}}
+
+###
+
+GET {{baseUrl}}/66d1cf98c91a0ac1fe5d7b1a
+
+###
+
+POST {{baseUrl}}
+Content-Type: application/json
+ 
+{
+    "name": "Patrizia",
+      "surname": "Patti",
+      "email": "patti@patti.com",
+      "avatar": "",
+      "password":"asdqwe"
+} 
+
+###
+
+PUT {{baseUrl}}/66c62f5823cdebec0a1b54be
+Content-Type: application/json
+
+{
+    "name": "Antonio",
+    "surname": "Fedele",
+    "email": "antonio@fedele.com",
+    "avatar": "antofedele"
+} 
+
+
+###
+
+DELETE {{baseUrl}}/66d1c325d4400220a5f7762f
